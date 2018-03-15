@@ -1,13 +1,11 @@
 <template name="appInstall">
 	<section class="preferences-page">
-		<header class="preferences-page__header">
-			{{> burger}}
+		{{# header hideHelp=true}}
 			<a href="{{pathFor "apps"}}" title="{{_ "Back_to_Manage_Apps"}}">
 				<i class="icon-left-open"></i>
 			</a> &nbsp;
-
 			<h2>{{_ "App_Installation"}}</h2>
-		</header>
+		{{/header}}
 		<div class="preferences-page__content">
 			{{#if isInstalling}}
 				{{> loading}}
